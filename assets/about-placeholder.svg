@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+    <rect width="1200" height="800" fill="#e9eef0"/>
+    
+    <rect x="70" y="70" width="1060" height="660" rx="28" fill="#dce5e7"/>
+    <circle cx="360" cy="300" r="110" fill="#c99b43"/><path d="M160 650c30-170 100-250 200-250s170 80 200 250" fill="#6c8996"/>
+    <circle cx="760" cy="300" r="110" fill="#b9c8ce"/><path d="M560 650c30-170 100-250 200-250s170 80 200 250" fill="#829da8"/>
+    <text x="600" y="710" text-anchor="middle" font-family="Arial" font-size="34" fill="#526874">REPLACE WITH TRUST ACTIVITY PHOTO</text>
+    </svg>
