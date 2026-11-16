@@ -1453,3 +1453,58 @@ img { max-width: 100%; }
     font-size: 12px;
   }
 }
+
+/* HEADER NAVIGATION FIX */
+header .nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+
+header .nav-links a,
+header .nav-links button,
+header .nav-links .exam-trigger {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+header a,
+header button {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+header .nav-links .exam-menu {
+  flex-shrink: 0;
+}
+
+header .nav-links .exam-trigger {
+  min-width: 105px;
+  justify-content: center;
+  padding: 13px 16px;
+}
+
+/* Header buttons should not break text */
+header .nav-links a[href*="contact"],
+header .nav-links a[href*="donate"] {
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+/* Desktop spacing */
+@media (min-width: 1051px) {
+  header .nav-links {
+    gap: 12px;
+  }
+
+  header .nav-links a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
