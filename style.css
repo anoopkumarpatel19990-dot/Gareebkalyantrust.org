@@ -1742,3 +1742,15 @@ img {
   border-color: #15803d;
   transform: translateY(-2px);
 }
+/* Exam Portal Button - Red Color */
+.exam-trigger {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border: 1px solid #dc2626;
+  white-space: nowrap;
+}
+
+.exam-trigger:hover {
+  background: #b91c1c !important;
+  border-color: #b91c1c;
+}
