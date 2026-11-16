@@ -1786,3 +1786,145 @@ img {
     flex-shrink: 0 !important;
   }
 }
+/* =========================================
+   FINAL HEADER FIX
+   Tablet/Desktop: All menu buttons visible
+   Mobile: Hamburger menu
+========================================= */
+
+/* TABLET + DESKTOP */
+@media (min-width: 761px) {
+
+  .site-header .nav-wrap {
+    width: 100% !important;
+    max-width: 1600px !important;
+    min-height: 72px !important;
+    padding: 8px 15px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  /* Hamburger hide */
+  .site-header .menu-toggle {
+    display: none !important;
+  }
+
+  /* All navigation buttons visible */
+  .site-header .nav-links {
+    display: flex !important;
+    position: static !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .site-header .nav-links > a {
+    display: inline-flex !important;
+    justify-content: center !important;
+    padding: 8px 9px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .site-header .exam-menu {
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  .site-header .exam-trigger {
+    width: auto !important;
+    padding: 8px 11px !important;
+  }
+
+  .site-header .language-btn {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 8px 10px !important;
+  }
+
+  .site-header .exam-dropdown {
+    position: absolute !important;
+    width: 245px !important;
+    right: 0 !important;
+    top: calc(100% + 12px) !important;
+  }
+}
+
+/* =========================================
+   BOTH DONATE NOW BUTTONS - GREEN
+========================================= */
+
+.site-header .donate-btn,
+.site-header a.donate-btn,
+.hero .btn-donate {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: 1px solid #16a34a !important;
+}
+
+.site-header .donate-btn:hover,
+.site-header a.donate-btn:hover,
+.hero .btn-donate:hover {
+  background: #15803d !important;
+  border-color: #15803d !important;
+  color: #ffffff !important;
+}
+
+/* =========================================
+   EXAM PORTAL - PURPLE
+========================================= */
+
+.site-header .exam-trigger {
+  background: #7c3aed !important;
+  color: #ffffff !important;
+  border: 1px solid #7c3aed !important;
+}
+
+.site-header .exam-trigger:hover {
+  background: #6d28d9 !important;
+  border-color: #6d28d9 !important;
+  color: #ffffff !important;
+}
+
+/* =========================================
+   MOBILE: KEEP HAMBURGER MENU
+========================================= */
+
+@media (max-width: 760px) {
+
+  .site-header .menu-toggle {
+    display: block !important;
+  }
+
+  .site-header .nav-links {
+    display: none !important;
+  }
+
+  .site-header .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .site-header .nav-links .donate-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .site-header .exam-trigger {
+    width: 100% !important;
+  }
+}
