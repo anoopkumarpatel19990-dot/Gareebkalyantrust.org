@@ -1754,3 +1754,35 @@ img {
   background: #b91c1c !important;
   border-color: #b91c1c;
 }
+/* Tablet and Desktop - Show All Navigation Buttons */
+@media (min-width: 761px) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav-wrap {
+    flex-wrap: nowrap !important;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .nav-links > a,
+  .exam-trigger,
+  .language-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+}
