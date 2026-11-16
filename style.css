@@ -1623,3 +1623,70 @@ img { max-width: 100%; }
   }
 }
 
+/* =====================================
+   FULL WIDTH PROFESSIONAL HEADER
+===================================== */
+
+@media (min-width: 1051px) {
+
+  .site-header .nav-wrap {
+    width: 97%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .site-header .brand {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .site-header .nav-links {
+    flex: 1;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .site-header .nav-links > a:not(.nav-cta) {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+
+  .site-header .exam-menu,
+  .site-header .language-btn,
+  .site-header .nav-cta {
+    flex-shrink: 0;
+  }
+
+  .site-header .nav-cta {
+    padding: 13px 16px;
+  }
+}
+
+/* Smaller desktop screens */
+@media (min-width: 1051px) and (max-width: 1200px) {
+  .site-header .nav-wrap {
+    width: 98%;
+    gap: 8px;
+  }
+
+  .site-header .nav-links {
+    gap: 4px;
+  }
+
+  .site-header .nav-links > a:not(.nav-cta) {
+    font-size: 12px;
+    padding: 8px 3px;
+  }
+}
+
