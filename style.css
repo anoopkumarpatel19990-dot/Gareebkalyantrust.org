@@ -1920,3 +1920,137 @@ img {
     width: 20px !important;
   }
 }
+
+/* =========================================
+   HERO BANNER - ORIGINAL IMAGE RATIO FIX
+========================================= */
+
+/* Desktop */
+.hero {
+  aspect-ratio: 3 / 2 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.hero-slides {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-slide {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
+.hero-slide.active {
+  transform: none !important;
+}
+
+/* Content scales with screen width */
+.hero-content {
+  width: 100% !important;
+  padding: clamp(12px, 4vw, 65px) 0 !important;
+}
+
+.hero h1 {
+  font-size: clamp(18px, 4.5vw, 70px) !important;
+  line-height: 1.15 !important;
+}
+
+.hero p {
+  font-size: clamp(10px, 1.5vw, 18px) !important;
+  line-height: 1.4 !important;
+}
+
+.hero .eyebrow {
+  font-size: clamp(9px, 1.1vw, 13px) !important;
+}
+
+.hero-actions {
+  gap: clamp(5px, 1vw, 13px) !important;
+}
+
+.hero-actions .btn {
+  font-size: clamp(9px, 1.2vw, 16px) !important;
+  padding: clamp(6px, 1vw, 13px) clamp(9px, 1.6vw, 22px) !important;
+}
+
+.hero-note {
+  font-size: clamp(9px, 1.1vw, 14px) !important;
+  margin-top: clamp(8px, 2vw, 48px) !important;
+}
+
+.slider-dots {
+  margin-top: clamp(7px, 1.5vw, 25px) !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+
+  .hero {
+    width: 100% !important;
+    aspect-ratio: 3 / 2 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .hero-slide {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .hero-content {
+    padding: 10px 0 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(15px, 4.5vw, 24px) !important;
+    line-height: 1.15 !important;
+    margin: 6px 0 !important;
+  }
+
+  .hero p {
+    font-size: clamp(9px, 2.5vw, 12px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 9px !important;
+    letter-spacing: .5px !important;
+  }
+
+  .hero-actions {
+    gap: 5px !important;
+  }
+
+  .hero-actions .btn {
+    font-size: 9px !important;
+    padding: 6px 9px !important;
+  }
+
+  .hero-note {
+    font-size: 9px !important;
+    margin-top: 7px !important;
+  }
+
+  .slider-dots {
+    margin-top: 7px !important;
+    gap: 5px !important;
+  }
+
+  .slider-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .slider-dot.active {
+    width: 15px !important;
+  }
+}
