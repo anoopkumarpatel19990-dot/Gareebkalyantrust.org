@@ -2105,3 +2105,19 @@ img {
   background: #f1eaff;
   color: #7139c9;
 }
+/* Back to Top Arrow - Floating Buttons se Upar */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 255px !important;
+  z-index: 10000;
+}
+
+/* Mobile Fix */
+@media (max-width: 760px) {
+  #backToTop {
+    right: 12px;
+    bottom: 250px !important;
+    z-index: 10000;
+  }
+}
