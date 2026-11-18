@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // Mobile navigation
   const toggle = document.querySelector(".menu-toggle");
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Exam dropdown
+  // Header Exam dropdown
   const examMenu = document.querySelector(".exam-menu");
   const examTrigger = document.querySelector(".exam-trigger");
 
@@ -36,6 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!examMenu.contains(event.target)) {
         examMenu.classList.remove("open");
         examTrigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Floating Exam Portal dropdown
+  const floatingExamBtn = document.getElementById("floatingExamBtn");
+  const floatingExamMenu = document.getElementById("floatingExamMenu");
+
+  if (floatingExamBtn && floatingExamMenu) {
+    floatingExamBtn.addEventListener("click", event => {
+      event.stopPropagation();
+
+      const isOpen = floatingExamMenu.classList.toggle("show");
+      floatingExamBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", event => {
+      if (
+        !floatingExamMenu.contains(event.target) &&
+        !floatingExamBtn.contains(event.target)
+      ) {
+        floatingExamMenu.classList.remove("show");
+        floatingExamBtn.setAttribute("aria-expanded", "false");
       }
     });
   }
@@ -64,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setLanguage(currentLanguage === "hi" ? "en" : "hi");
     });
   }
+
   setLanguage(currentLanguage);
 
   // Hero slider
@@ -74,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showHeroSlide(index) {
     if (!heroSlides.length) return;
+
     heroIndex = (index + heroSlides.length) % heroSlides.length;
 
     heroSlides.forEach((slide, i) => {
@@ -87,8 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function startHeroSlider() {
     if (heroSlides.length < 2) return;
+
     clearInterval(heroTimer);
-    heroTimer = setInterval(() => showHeroSlide(heroIndex + 1), 4500);
+    heroTimer = setInterval(() => {
+      showHeroSlide(heroIndex + 1);
+    }, 4500);
   }
 
   heroDots.forEach((dot, index) => {
@@ -97,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       startHeroSlider();
     });
   });
+
   startHeroSlider();
 
   // About image slider
@@ -106,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showAboutSlide(index) {
     if (!aboutSlides.length) return;
+
     aboutIndex = (index + aboutSlides.length) % aboutSlides.length;
 
     aboutSlides.forEach((slide, i) => {
@@ -118,7 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (aboutSlides.length > 1) {
-    setInterval(() => showAboutSlide(aboutIndex + 1), 4000);
+    setInterval(() => {
+      showAboutSlide(aboutIndex + 1);
+    }, 4000);
   }
 
   // Back to top button
@@ -130,12 +163,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  window.addEventListener("scroll", updateBackToTop, { passive: true });
+  window.addEventListener("scroll", updateBackToTop, {
+    passive: true
+  });
+
   updateBackToTop();
 
   if (backToTop) {
     backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   }
 
@@ -155,7 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
       });
-    }, { rootMargin: "-35% 0px -55% 0px" });
+    }, {
+      rootMargin: "-35% 0px -55% 0px"
+    });
 
     sections.forEach(section => observer.observe(section));
   }
