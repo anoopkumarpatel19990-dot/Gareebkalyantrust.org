@@ -1,0 +1,166 @@
+
+:root {
+  --navy: #102f49;
+  --navy-dark: #092338;
+  --gold: #c99b43;
+  --gold-light: #e7c77f;
+  --text: #263b4a;
+  --muted: #71808a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--navy-dark), #174767);
+}
+
+.shell {
+  width: min(950px, 100%);
+  margin: 35px auto;
+}
+
+.panel {
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px #0003;
+}
+
+#loginPanel {
+  max-width: 440px;
+  margin: 8vh auto;
+}
+
+.mark {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-weight: 800;
+  margin: 15px 0 5px;
+}
+
+h1 {
+  color: var(--navy);
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8e0e6;
+  border-radius: 9px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 9px;
+  background: var(--navy);
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+button:hover {
+  background: #174767;
+}
+
+button:disabled {
+  opacity: .6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dash-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e9ed;
+}
+
+.secondary {
+  background: #edf1f4;
+  color: var(--navy);
+  margin: 0;
+}
+
+.field-group {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e9ed;
+}
+
+.field-group h2 {
+  color: var(--navy);
+  font-size: 19px;
+}
+
+.message {
+  color: #b3261e;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .dash-head {
+    display: block;
+  }
+
+  .secondary {
+    margin-top: 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
