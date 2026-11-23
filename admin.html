@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GKT Admin Panel</title>
+
+  <link rel="stylesheet" href="admin.css">
+
+  <script type="module" src="admin.js"></script>
+</head>
+
+<body>
+
+  <main class="shell">
+
+    <!-- ADMIN LOGIN -->
+    <section class="panel" id="loginPanel">
+
+      <div class="mark">GKT</div>
+
+      <p class="eyebrow">
+        गरीब कल्याण ट्रस्ट, सहजनी
+      </p>
+
+      <h1>Admin Login</h1>
+
+      <p class="muted">
+        मुख्य Admin के लिए सुरक्षित लॉगिन
+      </p>
+
+      <form id="loginForm">
+
+        <label for="username">Username</label>
+
+        <input
+          id="username"
+          type="text"
+          autocomplete="username"
+          required
+          placeholder="अपना Username डालें"
+        >
+
+        <label for="password">Password</label>
+
+        <input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          placeholder="अपना Password डालें"
+        >
+
+        <button type="submit" id="loginBtn">
+          Login
+        </button>
+
+        <p id="loginMessage" class="message"></p>
+
+      </form>
+
+    </section>
+
+
+    <!-- ADMIN DASHBOARD -->
+    <section
+      class="panel dashboard hidden"
+      id="dashboardPanel"
+    >
+
+      <header class="dash-head">
+
+        <div>
+
+          <p class="eyebrow">GKT WEBSITE</p>
+
+          <h1>Website Text Editor</h1>
+
+          <p class="muted">
+            यहाँ बदलाव सेव करने पर वेबसाइट पर दिखेंगे।
+            तस्वीरें कोड में ही रहेंगी।
+          </p>
+
+        </div>
+
+        <button
+          class="secondary"
+          id="logoutBtn"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </header>
+
+
+      <form id="contentForm">
+
+        <div id="fields"></div>
+
+        <button type="submit" id="saveBtn">
+          बदलाव सेव करें
+        </button>
+
+        <p id="saveMessage" class="message"></p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
